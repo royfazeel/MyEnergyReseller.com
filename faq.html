@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | MyEnergyProvider.com</title>
+    <title>FAQ - Third-Party Payment Service | MyEnergyProvider</title>
+    <meta name="description" content="Frequently asked questions about MyEnergyProvider third-party bill payment service. Service fees apply. Not a utility company.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +18,7 @@
         .faq-item.active .faq-question svg { transform: rotate(45deg); }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s; }
         .faq-answer p { padding: 0 30px 25px; color: var(--text-secondary); line-height: 1.8; }
-        .faq-item.active .faq-answer { max-height: 300px; }
+        .faq-item.active .faq-answer { max-height: 400px; }
     </style>
 </head>
 <body>
@@ -43,56 +44,57 @@
         <a href="tel:+18885240250" class="mobile-nav-cta">📞 (888) 524-0250</a>
     </div>
 
-    <section class="hero" style="min-height:auto;padding:160px 20px 80px;">
+    <section class="hero" style="min-height:auto;padding:160px 20px 60px;">
         <div class="hero-content"><h1>Frequently Asked <span>Questions</span></h1></div>
     </section>
 
     <section class="section" style="padding-top:20px;">
         <div style="max-width:800px;margin:0 auto;">
             <div class="faq-item active">
-                <div class="faq-question" onclick="toggleFaq(this)"><span>How does your service work?</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
-                <div class="faq-answer"><p>Simply call (888) 524-0250, provide your energy provider and account information, and our specialist will process your payment securely. You'll receive instant confirmation.</p></div>
+                <div class="faq-question" onclick="toggleFaq(this)"><span>Are you affiliated with any utility company?</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
+                <div class="faq-answer"><p><strong>No.</strong> MyEnergyProvider is an <strong>independent third-party bill payment service</strong>. We are NOT affiliated with, endorsed by, or connected to any utility company including Duke Energy, PG&E, SCE, FPL, or any other provider mentioned on our website.</p></div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)"><span>Which energy providers do you support?</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
-                <div class="faq-answer"><p>We support over 50 major energy providers including Duke Energy, PG&E, Southern California Edison, FPL, Dominion Energy, Con Edison, Xcel Energy, and many more.</p></div>
+                <div class="faq-question" onclick="toggleFaq(this)"><span>Do you charge a fee for your service?</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
+                <div class="faq-answer"><p><strong>Yes.</strong> We charge a convenience fee for our phone-based payment service. The exact fee amount will be <strong>clearly disclosed to you before</strong> your payment is processed. You have the right to decline our service at any time.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)"><span>Can I pay my bill for free elsewhere?</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
+                <div class="faq-answer"><p><strong>Yes.</strong> You can pay your utility bill directly through your utility provider's official website, mobile app, or customer service line, typically at no additional cost. Our service is an optional convenience for those who prefer phone-based assistance.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)"><span>How does your service work?</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
+                <div class="faq-answer"><p>Call (888) 524-0250, provide your utility provider and account information, and our representative will help process your payment. Before processing, we will disclose our service fee. You can decline at any time.</p></div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)"><span>Is my payment information secure?</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
-                <div class="faq-answer"><p>Absolutely! We use bank-level 256-bit SSL encryption and are PCI-DSS compliant. Your payment information is never stored and is processed through secure payment networks.</p></div>
+                <div class="faq-answer"><p>We use encrypted payment processing. Your payment details are transmitted securely and we do not store your complete card information after the transaction.</p></div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)"><span>What payment methods do you accept?</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
-                <div class="faq-answer"><p>We accept all major credit cards (Visa, Mastercard, American Express, Discover), debit cards, and ACH bank transfers.</p></div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)"><span>Are you affiliated with energy providers?</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
-                <div class="faq-answer"><p>No, MyEnergyProvider is an independent third-party bill payment service. We are NOT affiliated with any energy provider mentioned on this website.</p></div>
+                <div class="faq-answer"><p>We accept major credit cards (Visa, Mastercard, American Express, Discover), debit cards, and bank transfers (ACH).</p></div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)"><span>What are your hours of operation?</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
-                <div class="faq-answer"><p>We are available 24 hours a day, 7 days a week, 365 days a year. You can call us anytime to make a payment.</p></div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)"><span>Is there a fee for using your service?</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
-                <div class="faq-answer"><p>A small convenience fee may apply. Our representative will inform you of any fees before processing your payment, so there are no surprises.</p></div>
+                <div class="faq-answer"><p>Our phone service is available 24 hours a day, 7 days a week.</p></div>
             </div>
         </div>
     </section>
 
     <section class="cta-section">
         <div class="cta-box">
-            <h2>Still Have Questions?</h2>
-            <p>Our friendly team is here to help!</p>
+            <h2>More Questions?</h2>
+            <p>Call us to learn more about our service and fees.</p>
             <a href="tel:+18885240250" class="cta-phone">(888) 524-0250</a>
-            <a href="tel:+18885240250" class="btn btn-primary btn-lg">Call Now</a>
+            <a href="tel:+18885240250" class="btn btn-primary btn-lg">Call Us</a>
+            <p style="margin-top:15px;font-size:0.8rem;color:#666;">Third-party service. Service fees apply.</p>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-bottom">
             <p>&copy; 2025 MyEnergyProvider.com. All rights reserved.</p>
-            <p class="footer-disclaimer">NOT affiliated with any energy provider.</p>
+            <p class="footer-disclaimer">NOT affiliated with any utility company. Third-party service. Fees apply.</p>
         </div>
     </footer>
 

@@ -1,14 +1,15 @@
 /* ============================================
    MyEnergyProvider.com - Enhanced Script
-   Interactive Popups & Animations
+   Google Ads Policy Compliant
    ============================================ */
 
 const CONFIG = {
     phoneNumber: '(888) 524-0250',
     phoneLink: 'tel:+18885240250',
-    popupDelay: 3000,
-    popupRecurDelay: 5000,
-    particleCount: 50
+    popupDelay: 5000,           // Show after 5 seconds
+    particleCount: 50,
+    // Pages where popup should NOT appear
+    noPopupPages: ['/', '/index.html', '/index', 'index.html']
 };
 
 // ============================================
@@ -251,14 +252,33 @@ function closePopup() {
         
         setTimeout(() => popup.remove(), 500);
         
-        // Recurring popup
-        if (popupTimeout) clearTimeout(popupTimeout);
-        popupTimeout = setTimeout(showPopup, CONFIG.popupRecurDelay);
+        // Mark as dismissed for this session - NO recurring popup (Google Ads compliant)
+        sessionStorage.setItem('popupDismissed', 'true');
     }
 }
 
+function isHomepage() {
+    const path = window.location.pathname;
+    return CONFIG.noPopupPages.some(p => 
+        path === p || path.endsWith(p) || path === '' || path === '/'
+    );
+}
+
 function initPopup() {
+    // Don't show popup on homepage (Google Ads compliant)
+    if (isHomepage()) {
+        return;
+    }
+    
+    // Only show popup once per session (Google Ads compliant - respects user choice)
+    if (sessionStorage.getItem('popupDismissed')) {
+        return;
+    }
+    
+    // Show popup after delay
     setTimeout(showPopup, CONFIG.popupDelay);
+    
+    // Close popup with Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && isPopupOpen) closePopup();
     });
