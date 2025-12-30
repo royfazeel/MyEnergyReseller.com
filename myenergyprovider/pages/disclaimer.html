@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer | MyEnergyProvider</title>
+    <meta name="description" content="Legal disclaimer for MyEnergyProvider phone-based energy bill payment services.">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #0a0a0f;
+            color: #ffffff;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: #00D4FF;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00D4FF, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #00D4FF;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #00D4FF, #00ff88);
+            color: #0a0a0f;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 2px;
+            background: #ffffff;
+            transition: 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 20px 60px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(0, 212, 255, 0.05) 0%, transparent 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffffff, #00D4FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+        }
+
+        /* Content Section */
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px 100px;
+        }
+
+        .content-section h2 {
+            font-size: 1.5rem;
+            margin: 40px 0 20px;
+            color: #00D4FF;
+        }
+
+        .content-section h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .content-section p {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 20px;
+        }
+
+        .content-section ul {
+            color: rgba(255, 255, 255, 0.85);
+            margin: 0 0 20px 25px;
+        }
+
+        .content-section li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .highlight-box h3 {
+            color: #00D4FF;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .warning-box h3 {
+            color: #ffc107;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .warning-box p {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(0, 212, 255, 0.1);
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: #00D4FF;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #00D4FF;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 15, 0.98);
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">MyEnergyProvider</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="providers.html">Providers</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="tel:+18885240250" class="nav-cta">Call Now</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Disclaimer</h1>
+        <p>Important legal information about our services</p>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <p><strong>Last Updated: January 2025</strong></p>
+
+        <h2>General Disclaimer</h2>
+        <p>The information provided on MyEnergyProvider.com and through our phone-based bill payment services is for general informational purposes only. While we strive to keep the information up-to-date and accurate, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the website or the information, products, services, or related graphics contained on the website for any purpose.</p>
+
+        <h2>Third-Party Service Provider</h2>
+        <p>MyEnergyProvider is an independent third-party bill payment service. We are not affiliated with, endorsed by, or sponsored by any utility company, including but not limited to Duke Energy, PG&E, Southern California Edison, Florida Power & Light, Dominion Energy, Con Edison, Xcel Energy, Entergy, NextEra Energy, PPL Corporation, AES Corporation, American Electric Power, Exelon Corporation, PSEG, or Southern Company.</p>
+
+        <div class="warning-box">
+            <h3>Important Notice</h3>
+            <p>All company names, logos, and trademarks mentioned on this website are the property of their respective owners. Any use of these names is for identification purposes only and does not imply endorsement or affiliation.</p>
+        </div>
+
+        <h2>Payment Processing</h2>
+        <p>When you use our phone-based payment service:</p>
+        <ul>
+            <li>We act as an intermediary to process your bill payments</li>
+            <li>Processing times may vary depending on your utility provider</li>
+            <li>Service fees may apply to transactions processed through our service</li>
+            <li>We recommend keeping records of all payment confirmations</li>
+            <li>Payment processing is subject to our terms of service</li>
+        </ul>
+
+        <h2>No Financial or Legal Advice</h2>
+        <p>Nothing on this website or communicated through our services constitutes financial, legal, or professional advice. For questions about your utility account, billing disputes, or rate plans, please contact your utility provider directly. For financial or legal matters, please consult with qualified professionals.</p>
+
+        <h2>Service Availability</h2>
+        <p>While we aim to provide 24/7 service availability, we cannot guarantee uninterrupted access to our phone-based payment services. Service interruptions may occur due to:</p>
+        <ul>
+            <li>System maintenance and updates</li>
+            <li>Technical difficulties beyond our control</li>
+            <li>Telecommunications network issues</li>
+            <li>Force majeure events</li>
+        </ul>
+
+        <h2>Accuracy of Information</h2>
+        <p>While we make every effort to ensure the accuracy of information on our website and provided through our services:</p>
+        <ul>
+            <li>Utility service areas and availability may change</li>
+            <li>Provider information may become outdated</li>
+            <li>Pricing and fee structures may vary</li>
+            <li>You should verify all information with your utility provider</li>
+        </ul>
+
+        <div class="highlight-box">
+            <h3>Your Responsibility</h3>
+            <p>It is your responsibility to verify the accuracy of your payment information, including account numbers and payment amounts, before completing any transaction. MyEnergyProvider is not responsible for payments made with incorrect information provided by the customer.</p>
+        </div>
+
+        <h2>Limitation of Liability</h2>
+        <p>To the fullest extent permitted by applicable law, MyEnergyProvider shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:</p>
+        <ul>
+            <li>Your use or inability to use our services</li>
+            <li>Any unauthorized access to or use of our servers or any personal information stored therein</li>
+            <li>Any interruption or cessation of transmission to or from our services</li>
+            <li>Any bugs, viruses, or the like that may be transmitted through our services</li>
+            <li>Any errors or omissions in any content</li>
+        </ul>
+
+        <h2>External Links</h2>
+        <p>Our website may contain links to external websites. These links are provided for convenience only, and we have no control over the content of linked sites. We are not responsible for the content, privacy practices, or availability of any external websites.</p>
+
+        <h2>Changes to This Disclaimer</h2>
+        <p>We reserve the right to modify this disclaimer at any time. Changes will be effective immediately upon posting on this page. Your continued use of our services following any changes constitutes acceptance of those changes.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this disclaimer, please contact us:</p>
+        <ul>
+            <li>Phone: <a href="tel:+18885240250">(888) 524-0250</a></li>
+            <li>Email: <a href="/cdn-cgi/l/email-protection#d3bfb6b4b2bf93beaab6bdb6a1b4aaa3a1bca5bab7b6a1fdb0bcbe"><span class="__cf_email__" data-cfemail="d9b5bcbeb8b599b4a0bcb7bcabbea0a9abb6afb0bdbcabf7bab6b4">[email&#160;protected]</span></a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>MyEnergyProvider</h4>
+                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">Pay your energy bills quickly and securely by phone. Available 24/7.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="providers.html">Providers</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Top Providers</h4>
+                <ul>
+                    <li><a href="providers/duke-energy.html">Duke Energy</a></li>
+                    <li><a href="providers/pge.html">PG&E</a></li>
+                    <li><a href="providers/sce.html">SCE</a></li>
+                    <li><a href="providers/fpl.html">FPL</a></li>
+                    <li><a href="providers/coned.html">Con Edison</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MyEnergyProvider. All rights reserved. | <a href="tel:+18885240250" style="color: #00D4FF;">(888) 524-0250</a></p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn 

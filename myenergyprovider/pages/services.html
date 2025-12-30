@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover MyEnergyProvider's hassle-free phone-based energy bill payment services. Quick, secure, and convenient.">
+    <title>Our Services - MyEnergyProvider</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="energy-grid"></div>
+        <div class="floating-particles" id="particles"></div>
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+    </div>
+
+    <div class="modal-overlay" id="callModal">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-content">
+                <div class="modal-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
+                <h2 class="modal-title">Pay Your Bill Now!</h2>
+                <p class="modal-subtitle">Quick & Hassle-Free Over The Phone</p>
+                <a href="tel:+18885240250" class="modal-cta pulse-animation">
+                    <span class="phone-icon">📞</span>
+                    Call (888) 524-0250
+                </a>
+                <p class="modal-note">Available 24/7 • All Major Providers • Secure Payment</p>
+            </div>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2"/>
+                        <path d="M20 8L24 18H16L20 8Z" fill="url(#logoGrad)"/>
+                        <path d="M16 18L20 32L24 18" fill="url(#logoGrad)" opacity="0.7"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#00D4AA"/>
+                                <stop offset="100%" stop-color="#00A3FF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">MyEnergy<span class="highlight">Provider</span></span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="providers.html" class="nav-link">Providers</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <a href="tel:+18885240250" class="header-cta">
+                <span>📞</span> (888) 524-0250
+            </a>
+            <button class="mobile-menu" id="mobileMenu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb animate-fade-in">
+                <a href="../index.html">Home</a>
+                <span>›</span>
+                <span>Services</span>
+            </div>
+            <h1 class="page-title animate-slide-up">Our <span class="gradient-text">Services</span></h1>
+            <p class="page-subtitle animate-slide-up delay-1">Comprehensive phone-based energy bill payment solutions for all your needs.</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-fade-in">What We Offer</span>
+                <h2 class="section-title animate-slide-up">Complete <span class="gradient-text">Bill Payment</span> Services</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">📞</div>
+                    <h3 class="feature-title">Phone Bill Payment</h3>
+                    <p class="feature-description">Pay your energy bill over the phone with our trained specialists. No apps, no websites – just a simple phone call.</p>
+                </div>
+                <div class="feature-card animate-fade-in delay-1">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Same-Day Processing</h3>
+                    <p class="feature-description">Payments are processed immediately, ensuring your energy service stays uninterrupted.</p>
+                </div>
+                <div class="feature-card animate-fade-in delay-2">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Secure Transactions</h3>
+                    <p class="feature-description">Bank-level 256-bit encryption protects all your payment information.</p>
+                </div>
+                <div class="feature-card animate-fade-in delay-3">
+                    <div class="feature-icon">📧</div>
+                    <h3 class="feature-title">Instant Confirmation</h3>
+                    <p class="feature-description">Receive email or SMS confirmation immediately after your payment is processed.</p>
+                </div>
+                <div class="feature-card animate-fade-in delay-4">
+                    <div class="feature-icon">💳</div>
+                    <h3 class="feature-title">Multiple Payment Methods</h3>
+                    <p class="feature-description">We accept all major credit cards, debit cards, and bank transfers for your convenience.</p>
+                </div>
+                <div class="feature-card animate-fade-in delay-5">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">All Major Providers</h3>
+                    <p class="feature-description">We support payments to 15+ major energy providers across all 50 states.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text animate-fade-in">
+                    <h2>How Our Service <span class="gradient-text">Works</span></h2>
+                    <p>Our streamlined process makes paying your energy bill effortless:</p>
+                    <ul>
+                        <li><strong>Step 1:</strong> Call our toll-free number (888) 524-0250</li>
+                        <li><strong>Step 2:</strong> Provide your energy provider and account number</li>
+                        <li><strong>Step 3:</strong> Tell us the payment amount</li>
+                        <li><strong>Step 4:</strong> Share your payment information securely</li>
+                        <li><strong>Step 5:</strong> Receive instant confirmation</li>
+                    </ul>
+                    <p>The entire process typically takes less than 3 minutes!</p>
+                </div>
+                <div class="content-image animate-scale-in delay-1">
+                    <div class="content-icon">🚀</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="content-text animate-fade-in">
+                    <h2>Payment Methods <span class="gradient-text">Accepted</span></h2>
+                    <p>We offer flexible payment options to suit your needs:</p>
+                    <ul>
+                        <li>Visa, Mastercard, American Express, Discover</li>
+                        <li>Debit cards from all major banks</li>
+                        <li>Bank account transfers (ACH)</li>
+                        <li>Prepaid debit cards</li>
+                    </ul>
+                    <p>All transactions are processed through our PCI-compliant secure payment system, ensuring your financial data is always protected.</p>
+                </div>
+                <div class="content-image animate-scale-in delay-1">
+                    <div class="content-icon">💳</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card animate-scale-in">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Pay Your Bill?</h2>
+                    <p class="cta-description">Our payment specialists are available 24/7 to assist you.</p>
+                    <a href="tel:+18885240250" class="btn btn-white btn-lg pulse-animation">
+                        <span class="btn-icon">📞</span>
+                        Call Now: (888) 524-0250
+                    </a>
+                </div>
+                <div class="cta-visual">
+                    <div class="cta-circle">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" stroke="url(#ctaGrad)" stroke-width="2" fill="none"/>
+                            <text x="50" y="55" text-anchor="middle" fill="white" font-size="24">24/7</text>
+                            <defs>
+                                <linearGradient id="ctaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00D4AA"/>
+                                    <stop offset="100%" stop-color="#00A3FF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="18" stroke="url(#footerLogoGrad)" stroke-width="2"/>
+                                <path d="M20 8L24 18H16L20 8Z" fill="url(#footerLogoGrad)"/>
+                                <path d="M16 18L20 32L24 18" fill="url(#footerLogoGrad)" opacity="0.7"/>
+                                <defs>
+                                    <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00D4AA"/>
+                                        <stop offset="100%" stop-color="#00A3FF"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="logo-text">MyEnergy<span class="highlight">Provider</span></span>
+                    </a>
+                    <p class="footer-description">Making energy bill payments simple, secure, and hassle-free.</p>
+                    <div class="footer-contact">
+                        <a href="tel:+18885240250" class="contact-item">📞 (888) 524-0250</a>
+                        <a href="/cdn-cgi/l/email-protection#4b383e3b3b24393f0b26322e252e392c323b39243d222f2e3965282426" class="contact-item">✉️ <span class="__cf_email__" data-cfemail="b6c5c3c6c6d9c4c2f6dbcfd3d8d3c4d1cfc6c4d9c0dfd2d3c498d5d9db">[email&#160;protected]</span></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="providers.html">Providers</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="accessibility.html">Accessibility</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MyEnergyProvider. All rights reserved.</p>
+                <p class="footer-disclaimer">MyEnergyProvider is an independent bill payment service and is not affiliated with any energy provider.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="tel:+18885240250" class="floating-cta pulse-animation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 
