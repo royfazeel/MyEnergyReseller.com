@@ -2,535 +2,260 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MyEnergyProvider - Pay your energy bills hassle-free over the phone. Quick, secure, and convenient bill payment services for all major US energy providers.">
-    <meta name="keywords" content="energy bill payment, pay electric bill, utility bill payment, energy providers USA">
-    <meta name="author" content="MyEnergyProvider">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#0a0a0f">
+    <title>MyEnergyProvider.com - Pay Your Energy Bill Over the Phone Hassle-Free</title>
+    <meta name="description" content="Pay your energy bill over the phone hassle-free. We help you manage payments for all major US energy providers including Duke Energy, PG&E, Con Edison, and more. Call (888) 525-0250.">
+    <meta name="keywords" content="energy bill payment, pay electric bill, utility bill payment, Duke Energy, PG&E, Con Edison, Southern Company, phone bill payment">
     <meta name="robots" content="index, follow">
-    <title>MyEnergyProvider - Hassle-Free Energy Bill Payment Services</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="canonical" href="https://myenergyprovider.com/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="MyEnergyProvider.com - Pay Your Energy Bill Hassle-Free">
+    <meta property="og:description" content="Pay your energy bill over the phone with a live representative. No automated menus, instant processing, 24/7 support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://myenergyprovider.com/">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="energy-grid"></div>
-        <div class="floating-particles" id="particles"></div>
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="gradient-orb orb-3"></div>
-    </div>
+    <!-- Background Effects -->
+    <div class="bg-animation"></div>
+    <div class="grid-overlay"></div>
+    <div class="particles" id="particles"></div>
 
-    <!-- Professional Modal -->
-    <div class="modal-overlay" id="callModal">
-        <div class="modal-container">
-            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
-            <div class="modal-content">
-                <div class="modal-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                    </svg>
-                </div>
-                <h2 class="modal-title">Pay Your Bill Now!</h2>
-                <p class="modal-subtitle">Quick & Hassle-Free Over The Phone</p>
-                <a href="tel:+18885240250" class="modal-cta pulse-animation">
-                    <span class="phone-icon">📞</span>
-                    Call (888) 524-0250
-                </a>
-                <p class="modal-note">Available 24/7 • All Major Providers • Secure Payment</p>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 24 24"><path d="M13 2.03v2.02c4.39.54 7.5 4.53 6.96 8.92-.46 3.64-3.32 6.53-6.96 6.96v2.02c5.5-.55 9.5-5.43 8.95-10.93-.45-4.75-4.22-8.5-8.95-8.99m-2 .03c-1.95.19-3.81.94-5.33 2.2l1.43 1.47c1.14-.86 2.44-1.44 3.9-1.66V2.06m-6.9 4.47C2.84 7.99 2.09 9.85 1.9 11.8h2.02c.19-1.39.75-2.68 1.58-3.82L2.1 6.5m-.2 7.47c.19 1.95.94 3.81 2.2 5.33l1.47-1.43c-.86-1.14-1.44-2.44-1.66-3.9H1.9Z"/></svg>
             </div>
+            MyEnergyProvider
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="pages/providers.html">Providers</a></li>
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/faq.html">FAQ</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+        <a href="tel:8885250250" class="nav-cta">📞 Call Now</a>
+        <div class="hamburger" onclick="toggleMobileNav()">
+            <span></span><span></span><span></span>
         </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="pages/providers.html">Energy Providers</a>
+        <a href="pages/services.html">Our Services</a>
+        <a href="pages/about.html">About Us</a>
+        <a href="pages/faq.html">FAQ</a>
+        <a href="pages/contact.html">Contact</a>
+        <a href="tel:8885250250" class="mobile-nav-cta">📞 (888) 525-0250</a>
     </div>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 40 40" fill="none">
-                        <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2"/>
-                        <path d="M20 8L24 18H16L20 8Z" fill="url(#logoGrad)"/>
-                        <path d="M16 18L20 32L24 18" fill="url(#logoGrad)" opacity="0.7"/>
-                        <defs>
-                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#00D4AA"/>
-                                <stop offset="100%" stop-color="#00A3FF"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-                <span class="logo-text">MyEnergy<span class="highlight">Provider</span></span>
-            </a>
-            <nav class="nav" id="nav">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="providers.html" class="nav-link">Providers</a>
-                <a href="faq.html" class="nav-link">FAQ</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
-            <a href="tel:+18885240250" class="header-cta">
-                <span>📞</span> (888) 524-0250
-            </a>
-            <button class="mobile-menu" id="mobileMenu" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
             <div class="hero-content">
-                <div class="hero-badge animate-fade-in">
-                    <span class="badge-dot"></span>
-                    Trusted by 50,000+ Customers Nationwide
+                <div class="hero-badge">
+                    <span>Trusted by 100,000+ Customers Nationwide</span>
                 </div>
-                <h1 class="hero-title animate-slide-up">
-                    Pay Your <span class="gradient-text">Energy Bill</span><br>
-                    Hassle-Free Over The Phone
-                </h1>
-                <p class="hero-description animate-slide-up delay-1">
-                    Skip the long wait times and confusing websites. Our dedicated team helps you pay your energy bills quickly and securely with just one phone call.
-                </p>
-                <div class="hero-actions animate-slide-up delay-2">
-                    <a href="tel:+18885240250" class="btn btn-primary btn-lg">
-                        <span class="btn-icon">📞</span>
-                        Call Now: (888) 524-0250
+                <h1>Pay Your Energy Bill Over the Phone, Hassle-Free</h1>
+                <p>Skip the long hold times and confusing automated systems. Our expert representatives are ready to help you pay your energy bill quickly and securely with just one simple phone call.</p>
+                <div class="hero-buttons">
+                    <a href="tel:8885250250" class="btn-primary">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        Call (888) 525-0250
                     </a>
-                    <a href="services.html" class="btn btn-outline btn-lg">
-                        Learn More
-                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
+                    <a href="pages/providers.html" class="btn-secondary">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        View Providers
                     </a>
                 </div>
-                <div class="hero-trust animate-fade-in delay-3">
-                    <div class="trust-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <path d="M9 12l2 2 4-4"/>
-                        </svg>
-                        <span>256-bit Encryption</span>
-                    </div>
-                    <div class="trust-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12,6 12,12 16,14"/>
-                        </svg>
-                        <span>24/7 Support</span>
-                    </div>
-                    <div class="trust-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                            <polyline points="22,4 12,14.01 9,11.01"/>
-                        </svg>
-                        <span>All US Providers</span>
-                    </div>
+            </div>
+            <div class="hero-visual">
+                <div class="energy-orb">
+                    <div class="orb-core"></div>
+                    <div class="orb-ring"></div>
+                    <div class="orb-ring"></div>
+                    <div class="orb-ring"></div>
                 </div>
             </div>
-            <div class="hero-visual animate-scale-in">
-                <div class="hero-card">
-                    <div class="card-glow"></div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <div class="card-icon">⚡</div>
-                            <span>Quick Payment</span>
-                        </div>
-                        <div class="card-stats">
-                            <div class="stat">
-                                <span class="stat-number" data-count="2">0</span>
-                                <span class="stat-label">Min Avg Call</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number" data-count="50">0</span>
-                                <span class="stat-suffix">K+</span>
-                                <span class="stat-label">Happy Customers</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number" data-count="15">0</span>
-                                <span class="stat-suffix">+</span>
-                                <span class="stat-label">Major Providers</span>
-                            </div>
-                        </div>
-                        <div class="card-providers">
-                            <span class="provider-tag">Duke Energy</span>
-                            <span class="provider-tag">PG&E</span>
-                            <span class="provider-tag">ConEd</span>
-                            <span class="provider-tag">+12 More</span>
-                        </div>
-                    </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="section stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">100K+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Energy Providers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2 min</div>
+                    <div class="stat-label">Avg. Call Time</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Providers Ticker -->
-    <section class="ticker-section">
-        <div class="ticker-wrapper">
-            <div class="ticker-content">
-                <span class="ticker-item">⚡ Duke Energy</span>
-                <span class="ticker-item">⚡ Pacific Gas & Electric</span>
-                <span class="ticker-item">⚡ Southern California Edison</span>
-                <span class="ticker-item">⚡ Florida Power & Light</span>
-                <span class="ticker-item">⚡ Dominion Energy</span>
-                <span class="ticker-item">⚡ Consolidated Edison</span>
-                <span class="ticker-item">⚡ Xcel Energy</span>
-                <span class="ticker-item">⚡ AES Corporation</span>
-                <span class="ticker-item">⚡ Entergy</span>
-                <span class="ticker-item">⚡ PPL Corporation</span>
-                <span class="ticker-item">⚡ Duke Energy</span>
-                <span class="ticker-item">⚡ Pacific Gas & Electric</span>
-                <span class="ticker-item">⚡ Southern California Edison</span>
-                <span class="ticker-item">⚡ Florida Power & Light</span>
-                <span class="ticker-item">⚡ Dominion Energy</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
+        <!-- How It Works -->
+        <section class="section">
             <div class="section-header">
-                <span class="section-tag animate-fade-in">Why Choose Us</span>
-                <h2 class="section-title animate-slide-up">
-                    Simple, Secure & <span class="gradient-text">Swift</span>
-                </h2>
-                <p class="section-description animate-slide-up delay-1">
-                    We've streamlined the energy bill payment process so you can focus on what matters most.
-                </p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card animate-fade-in">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">One Call Solution</h3>
-                    <p class="feature-description">Pay your energy bill with a single phone call. No apps, no websites, no hassle.</p>
-                </div>
-                <div class="feature-card animate-fade-in delay-1">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Bank-Level Security</h3>
-                    <p class="feature-description">Your payment information is protected with 256-bit encryption and PCI compliance.</p>
-                </div>
-                <div class="feature-card animate-fade-in delay-2">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12,6 12,12 16,14"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">24/7 Availability</h3>
-                    <p class="feature-description">Our lines are open around the clock. Pay your bills anytime that works for you.</p>
-                </div>
-                <div class="feature-card animate-fade-in delay-3">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Expert Support</h3>
-                    <p class="feature-description">Friendly, knowledgeable agents who speak your language and understand your needs.</p>
-                </div>
-                <div class="feature-card animate-fade-in delay-4">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-                            <line x1="1" y1="10" x2="23" y2="10"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">All Payment Methods</h3>
-                    <p class="feature-description">Credit cards, debit cards, bank transfers – we accept all major payment options.</p>
-                </div>
-                <div class="feature-card animate-fade-in delay-5">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14,2 14,8 20,8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Instant Confirmation</h3>
-                    <p class="feature-description">Receive immediate payment confirmation via email or text message.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag animate-fade-in">Simple Process</span>
-                <h2 class="section-title animate-slide-up">
-                    How It <span class="gradient-text">Works</span>
-                </h2>
+                <h2>How It Works</h2>
+                <p>Paying your energy bill has never been easier. Just three simple steps.</p>
             </div>
             <div class="steps-container">
-                <div class="step animate-fade-in">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3>Call Our Number</h3>
-                        <p>Dial (888) 524-0250 to connect with our payment specialists.</p>
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                     </div>
-                    <div class="step-icon">📞</div>
+                    <h3>Call Our Hotline</h3>
+                    <p>Dial our toll-free number and connect with a friendly representative instantly. No automated menus.</p>
                 </div>
-                <div class="step-connector"></div>
-                <div class="step animate-fade-in delay-1">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3>Provide Your Details</h3>
-                        <p>Share your energy provider and account information securely.</p>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
                     </div>
-                    <div class="step-icon">📋</div>
+                    <h3>Provide Your Details</h3>
+                    <p>Share your account number and energy provider. Your information is protected with bank-level security.</p>
                 </div>
-                <div class="step-connector"></div>
-                <div class="step animate-fade-in delay-2">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3>Make Payment</h3>
-                        <p>Choose your payment method and complete the transaction.</p>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                     </div>
-                    <div class="step-icon">💳</div>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step animate-fade-in delay-3">
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h3>Get Confirmation</h3>
-                        <p>Receive instant confirmation of your successful payment.</p>
-                    </div>
-                    <div class="step-icon">✅</div>
+                    <h3>Payment Complete!</h3>
+                    <p>Your payment is processed instantly with confirmation. Simple, fast, and stress-free.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Providers Section -->
-    <section class="providers-section">
-        <div class="container">
+        <!-- Providers Preview -->
+        <section class="section">
             <div class="section-header">
-                <span class="section-tag animate-fade-in">Energy Providers</span>
-                <h2 class="section-title animate-slide-up">
-                    We Support <span class="gradient-text">All Major</span> US Providers
-                </h2>
-                <p class="section-description animate-slide-up delay-1">
-                    From coast to coast, we help you pay bills for the nation's leading energy companies.
-                </p>
+                <h2>Top Energy Providers We Support</h2>
+                <p>We work with all major energy providers across the United States.</p>
             </div>
             <div class="providers-grid">
-                <a href="duke-energy.html" class="provider-card animate-fade-in">
-                    <div class="provider-logo">⚡</div>
-                    <h4>Duke Energy</h4>
-                    <span class="provider-region">Southeast & Midwest</span>
+                <a href="pages/providers/duke-energy.html" class="provider-card provider-duke">
+                    <div class="provider-icon">DE</div>
+                    <h3>Duke Energy</h3>
+                    <p>Serving 7.7 million customers across the Carolinas, Florida, Indiana, Ohio, and Kentucky.</p>
+                    <span class="provider-btn">Pay Bill Now →</span>
                 </a>
-                <a href="pge.html" class="provider-card animate-fade-in delay-1">
-                    <div class="provider-logo">⚡</div>
-                    <h4>Pacific Gas & Electric</h4>
-                    <span class="provider-region">California</span>
+                <a href="pages/providers/southern-company.html" class="provider-card provider-southern">
+                    <div class="provider-icon">SC</div>
+                    <h3>Southern Company</h3>
+                    <p>America's premier energy company serving 9 million customers across the Southeast.</p>
+                    <span class="provider-btn">Pay Bill Now →</span>
                 </a>
-                <a href="sce.html" class="provider-card animate-fade-in delay-2">
-                    <div class="provider-logo">⚡</div>
-                    <h4>Southern California Edison</h4>
-                    <span class="provider-region">California</span>
+                <a href="pages/providers/nextera-energy.html" class="provider-card provider-nextera">
+                    <div class="provider-icon">NE</div>
+                    <h3>NextEra Energy</h3>
+                    <p>The world's largest producer of wind and solar energy, serving millions in Florida.</p>
+                    <span class="provider-btn">Pay Bill Now →</span>
                 </a>
-                <a href="fpl.html" class="provider-card animate-fade-in delay-3">
-                    <div class="provider-logo">⚡</div>
-                    <h4>Florida Power & Light</h4>
-                    <span class="provider-region">Florida</span>
-                </a>
-                <a href="dominion.html" class="provider-card animate-fade-in delay-4">
-                    <div class="provider-logo">⚡</div>
-                    <h4>Dominion Energy</h4>
-                    <span class="provider-region">Virginia & Carolinas</span>
-                </a>
-                <a href="coned.html" class="provider-card animate-fade-in delay-5">
-                    <div class="provider-logo">⚡</div>
-                    <h4>Consolidated Edison</h4>
-                    <span class="provider-region">New York</span>
+                <a href="pages/providers/pge.html" class="provider-card provider-pge">
+                    <div class="provider-icon">PG&E</div>
+                    <h3>Pacific Gas & Electric</h3>
+                    <p>California's largest utility serving 16 million customers across Northern California.</p>
+                    <span class="provider-btn">Pay Bill Now →</span>
                 </a>
             </div>
-            <div class="providers-cta animate-fade-in">
-                <a href="providers.html" class="btn btn-outline">
-                    View All 15+ Providers
-                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="pages/providers.html" class="btn-secondary">View All 10 Providers →</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag animate-fade-in">Testimonials</span>
-                <h2 class="section-title animate-slide-up">
-                    What Our <span class="gradient-text">Customers</span> Say
-                </h2>
+        <!-- CTA Section -->
+        <section class="section cta-section">
+            <div class="cta-content">
+                <h2>Ready to Pay Your Bill?</h2>
+                <p>Our friendly representatives are standing by to assist you. One call is all it takes!</p>
+                <a href="tel:8885250250" class="cta-phone">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    (888) 525-0250
+                </a>
+                <p class="cta-email">Or email: <a href="mailto:support@myenergyprovider.com">support@myenergyprovider.com</a></p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card animate-fade-in">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"I was skeptical at first, but this service saved me so much time. I pay all my utility bills through them now. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JM</div>
-                        <div class="author-info">
-                            <span class="author-name">Jennifer M.</span>
-                            <span class="author-location">Austin, TX</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card animate-fade-in delay-1">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"As a senior citizen, I appreciate not having to navigate confusing websites. One phone call and my bill is paid. Thank you!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">RW</div>
-                        <div class="author-info">
-                            <span class="author-name">Robert W.</span>
-                            <span class="author-location">Phoenix, AZ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card animate-fade-in delay-2">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"The customer service is exceptional. They're patient, professional, and make the whole process seamless. 5 stars!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SK</div>
-                        <div class="author-info">
-                            <span class="author-name">Sarah K.</span>
-                            <span class="author-location">Miami, FL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-card animate-scale-in">
-                <div class="cta-content">
-                    <h2 class="cta-title">Ready to Pay Your Bill?</h2>
-                    <p class="cta-description">Our friendly agents are standing by to help you pay your energy bill quickly and securely.</p>
-                    <a href="tel:+18885240250" class="btn btn-white btn-lg pulse-animation">
-                        <span class="btn-icon">📞</span>
-                        Call Now: (888) 524-0250
-                    </a>
-                    <p class="cta-note">Average call time: Under 3 minutes</p>
-                </div>
-                <div class="cta-visual">
-                    <div class="cta-circle">
-                        <svg viewBox="0 0 100 100">
-                            <circle cx="50" cy="50" r="45" stroke="url(#ctaGrad)" stroke-width="2" fill="none"/>
-                            <text x="50" y="55" text-anchor="middle" fill="white" font-size="24">24/7</text>
-                            <defs>
-                                <linearGradient id="ctaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#00D4AA"/>
-                                    <stop offset="100%" stop-color="#00A3FF"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                        <div class="logo-icon">
-                            <svg viewBox="0 0 40 40" fill="none">
-                                <circle cx="20" cy="20" r="18" stroke="url(#footerLogoGrad)" stroke-width="2"/>
-                                <path d="M20 8L24 18H16L20 8Z" fill="url(#footerLogoGrad)"/>
-                                <path d="M16 18L20 32L24 18" fill="url(#footerLogoGrad)" opacity="0.7"/>
-                                <defs>
-                                    <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stop-color="#00D4AA"/>
-                                        <stop offset="100%" stop-color="#00A3FF"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
-                        <span class="logo-text">MyEnergy<span class="highlight">Provider</span></span>
-                    </a>
-                    <p class="footer-description">Making energy bill payments simple, secure, and hassle-free for customers across the United States.</p>
-                    <div class="footer-contact">
-                        <a href="tel:+18885240250" class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            (888) 524-0250
-                        </a>
-                        <a href="mailto:support@myenergyprovider.com" class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                            support@myenergyprovider.com
-                        </a>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24"><path d="M13 2.03v2.02c4.39.54 7.5 4.53 6.96 8.92-.46 3.64-3.32 6.53-6.96 6.96v2.02c5.5-.55 9.5-5.43 8.95-10.93-.45-4.75-4.22-8.5-8.95-8.99m-2 .03c-1.95.19-3.81.94-5.33 2.2l1.43 1.47c1.14-.86 2.44-1.44 3.9-1.66V2.06m-6.9 4.47C2.84 7.99 2.09 9.85 1.9 11.8h2.02c.19-1.39.75-2.68 1.58-3.82L2.1 6.5m-.2 7.47c.19 1.95.94 3.81 2.2 5.33l1.47-1.43c-.86-1.14-1.44-2.44-1.66-3.9H1.9Z"/></svg>
                     </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
-                    <a href="providers.html">Energy Providers</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Top Providers</h4>
-                    <a href="duke-energy.html">Duke Energy</a>
-                    <a href="pge.html">PG&E</a>
-                    <a href="sce.html">Southern California Edison</a>
-                    <a href="fpl.html">Florida Power & Light</a>
-                    <a href="dominion.html">Dominion Energy</a>
-                    <a href="coned.html">Consolidated Edison</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="disclaimer.html">Disclaimer</a>
-                    <a href="accessibility.html">Accessibility</a>
+                    MyEnergyProvider
+                </a>
+                <p>Your trusted partner for hassle-free energy bill payments. Pay your bill over the phone with our friendly representatives.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 MyEnergyProvider. All rights reserved.</p>
-                <p class="footer-disclaimer">MyEnergyProvider is an independent bill payment service and is not affiliated with any energy provider listed on this website.</p>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/providers.html">Energy Providers</a></li>
+                    <li><a href="pages/services.html">Our Services</a></li>
+                    <li><a href="pages/about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Providers</h4>
+                <ul>
+                    <li><a href="pages/providers/duke-energy.html">Duke Energy</a></li>
+                    <li><a href="pages/providers/southern-company.html">Southern Company</a></li>
+                    <li><a href="pages/providers/pge.html">PG&E</a></li>
+                    <li><a href="pages/providers/con-edison.html">Con Edison</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:8885250250">📞 (888) 525-0250</a></li>
+                    <li><a href="mailto:support@myenergyprovider.com">✉️ Email Support</a></li>
+                    <li><a href="pages/faq.html">❓ FAQ</a></li>
+                    <li><a href="pages/contact.html">📍 Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 MyEnergyProvider.com. All rights reserved. We are NOT affiliated with any energy provider.</p>
+            <div class="footer-legal">
+                <a href="pages/privacy.html">Privacy Policy</a>
+                <a href="pages/terms.html">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Call Button -->
-    <a href="tel:+18885240250" class="floating-cta pulse-animation" aria-label="Call us now">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
-        <span class="floating-text">Call Now</span>
-    </a>
-
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
