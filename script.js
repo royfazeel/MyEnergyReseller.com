@@ -216,19 +216,22 @@ function closePopup() {
     }
 }
 
-function isHomepage() {
+function isExcludedPage() {
     const path = window.location.pathname.toLowerCase();
     const page = path.split('/').pop();
     
-    if (path === '/' || path === '' || page === '' || page === 'index.html' || page === 'index') {
+    // Excluded pages: homepage, disclaimer, privacy, terms
+    const excludedPages = ['', 'index.html', 'index', 'disclaimer.html', 'disclaimer', 'privacy.html', 'privacy', 'terms.html', 'terms'];
+    
+    if (path === '/' || path === '' || excludedPages.includes(page)) {
         return true;
     }
     return false;
 }
 
 function initPopup() {
-    // Don't show popup on homepage
-    if (isHomepage()) {
+    // Don't show popup on excluded pages (homepage, disclaimer, privacy, terms)
+    if (isExcludedPage()) {
         return;
     }
     
